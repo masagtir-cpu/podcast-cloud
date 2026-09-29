@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+     xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd"
+     xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>テックウィークリー</title>
+    <link>https://masagtir-cpu.github.io/podcast-cloud</link>
+    <description>毎回10分ほどで最新のニュースをふたりで解説します。</description>
+    <language>ja</language>
+    <itunes:author>PodCastCloud</itunes:author>
+    <itunes:summary>毎回10分ほどで最新のニュースをふたりで解説します。</itunes:summary>
+    <itunes:category text="Technology"/>
+    <itunes:explicit>false</itunes:explicit>
+    <atom:link href="https://masagtir-cpu.github.io/podcast-cloud/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>テックウィークリー 2026年09月29日</title>
+      <description>[注目トピック1] AIの「安全性」を巡る緊張感：OpenAIの新モデル公開見送りとAnthropicが警告する法的リスク / [注目トピック2] インフラ投資とリターンのバランス：巨額のデータセンター需要と、高まる市場の懸念 / [注目トピック3] アルゴリズムが変える価格のあり方：ダイナミックプライシングの一般化と「公正さ」の境界線</description>
+      <pubDate>Tue, 29 Sep 2026 06:00:00 +0900</pubDate>
+      <guid isPermaLink="false">2026-09-29-tech-weekly</guid>
+      <enclosure url="https://github.com/masagtir-cpu/podcast-cloud/releases/download/episodes/2026-09-29_tech-weekly.mp3" length="8684397" type="audio/mpeg"/>
+      <itunes:duration>00:12:04</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+  </channel>
+</rss>
