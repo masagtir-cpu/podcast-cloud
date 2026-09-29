@@ -1,0 +1,34 @@
+{
+  "_comment": [
+    "番組のテーマを変えるときは、ここを書き換えるだけでよい。",
+    "type=google_news は query を Google ニュース検索にかける(URLは自動生成)。",
+    "type=rss は url をそのまま取得する。",
+    "kind はモデルに渡すときの見出しのグループ分けに使う。"
+  ],
+  "sources": [
+    {
+      "label": "テクノロジー総合",
+      "type": "google_news",
+      "query": "テクノロジー OR IT技術",
+      "kind": "news"
+    },
+    {
+      "label": "AI・機械学習",
+      "type": "google_news",
+      "query": "AI OR 人工知能",
+      "kind": "news"
+    },
+    {
+      "label": "NHK 科学・文化",
+      "type": "rss",
+      "url": "https://www.nhk.or.jp/rss/news/cat3.xml",
+      "kind": "news"
+    },
+    {
+      "label": "Hacker News",
+      "type": "rss",
+      "url": "https://hnrss.org/frontpage",
+      "kind": "overseas"
+    }
+  ]
+}

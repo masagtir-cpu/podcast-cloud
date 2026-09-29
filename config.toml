@@ -1,0 +1,78 @@
+# ===== ここだけ変えれば番組の中身が変わる =====
+# テーマを変えたい場合は [program] と sources.json を編集すればよい。
+# コードを触る必要はない。
+
+[program]
+title    = "テックウィークリー"                      # 番組名(音声の冒頭で名乗る)
+slug     = "tech-weekly"                             # ファイル名・URL用(半角英数)
+theme    = "テクノロジー全般の最新ニュース"           # 何を扱う番組か
+listener = "技術の動向に関心がある社会人"             # 誰に向けて話すか
+minutes  = 10                                        # 目標の尺(分)
+days     = 7                                         # 何日ぶんのニュースを対象にするか
+max_items = 40                                       # モデルに渡す記事数の上限
+
+[cast]
+host_name  = "ユイ"   # 進行役(女性)
+guest_name = "ケン"   # 解説役(男性)
+
+# 既存(Irodori用)の台本は日替わりキャストで書かれているため、固定キャスト名へ寄せる。
+# クラウド版で台本から生成する場合は空のままでよい。
+[cast.rename]
+"スワベ" = "ケン"
+
+[feed]
+# ポッドキャストアプリに登録するRSSの情報。
+# site_url / base_url は GitHub Actions が環境変数で渡すので、空のままでよい。
+author      = "PodCastCloud"
+description = "毎回10分ほどで最新のニュースをふたりで解説します。"
+language    = "ja"
+category    = "Technology"   # Apple Podcasts のカテゴリ名
+explicit    = false
+image       = ""             # カバー画像のURL(任意。1400x1400以上のJPG/PNG)
+# 残す回数。0 なら全部残す(削除しない)。
+# 例: 50 にすると新しい50回だけ残り、それより古い音声は自動で消える。
+# 週1回なら0のままで何年でも問題ない。毎日配信なら50〜100くらいが扱いやすい。
+keep_episodes = 0
+site_url    = ""             # 例 https://<ユーザー名>.github.io/<リポジトリ名>
+base_url    = ""             # MP3の配信元URL
+
+# ===== 以下は通常さわらない =====
+
+[tts]
+engine   = "edge"       # 主エンジン
+fallback = "gemini"     # 主が失敗したときの予備("" で無効)
+
+[voices.edge]
+host  = "ja-JP-NanamiNeural"
+guest = "ja-JP-KeitaNeural"
+rate  = "+20%"         # 既定(+0%)だとGeminiより約35%長くなるため速めに寄せている
+
+[voices.gemini]
+host  = "Kore"
+guest = "Charon"
+
+# Google Cloud TTS は APIキー非対応(サービスアカウントが必要)なため既定では使わない。
+# 使う場合は README の手順で secrets/ に鍵を置き、tts.engine = "gcloud" にする。
+[voices.gcloud]
+host  = "ja-JP-Neural2-B"
+guest = "ja-JP-Neural2-C"
+speaking_rate = 1.0
+
+[gemini]
+model = "gemini-3.1-flash-tts-preview"
+# 台本・ダイジェスト生成用。上から順に試し、失敗したら次へ
+text_models = ["gemini-3.5-flash", "gemini-3-flash-preview", "gemini-3.1-flash-lite"]
+# 1リクエストが長いほど声がどんどん小さくなるため、必ず刻んで投げる。
+# 実測: 4,954字を1回で投げたら30秒毎の平均振幅が 3826 -> 84 まで低下した。
+chunk_chars    = 1500
+regen_budget   = 2      # 小声で返ってきた時に作り直せる回数(無料枠の節約のため上限つき)
+rms_floor_ratio = 0.55  # 1つ目のチャンクの何割を下回ったら作り直すか
+
+[gcloud]
+credentials = "secrets/gcp-service-account.json"
+
+[audio]
+mp3_bitrate = "96k"
+sample_rate = 24000
+gap_ms      = 250    # 行間に入れる無音(Gemini はチャンク単位合成なので適用外)
+normalize   = true   # チャンク間の音量差をならす(ffmpeg dynaudnorm)
