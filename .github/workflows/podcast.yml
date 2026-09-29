@@ -1,0 +1,80 @@
+name: podcast
+
+on:
+  # 毎週月曜 06:00 JST(= 日曜 21:00 UTC)。
+  # 毎日配信にするなら "0 21 * * *"、平日だけなら "0 21 * * 0-4" にする。
+  # あわせて config.toml の [program] days も合わせること。
+  schedule:
+    - cron: "0 21 * * 0"
+  workflow_dispatch:      # 手動実行もできるようにしておく
+
+permissions:
+  contents: write
+
+concurrency:
+  group: podcast
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: astral-sh/setup-uv@v5
+        with:
+          enable-cache: true
+
+      - name: ffmpeg を用意
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+
+      - name: エピソードを生成
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          PODCAST_BASE_URL: https://github.com/${{ github.repository }}/releases/download/episodes
+        run: |
+          export PODCAST_SITE_URL="https://${{ github.repository_owner }}.github.io/${GITHUB_REPOSITORY#*/}"
+          uv run make_episode.py
+
+      - name: MP3 を Releases にアップロード
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release view episodes >/dev/null 2>&1 \
+            || gh release create episodes --title "Episodes" --notes "配信用の音声ファイル置き場"
+          gh release upload episodes output/audio/*.mp3 --clobber
+
+      - name: 保存上限を超えた古い音声を削除
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          [ -f output/pruned.txt ] || { echo "削除対象なし"; exit 0; }
+          while read -r f; do
+            [ -n "$f" ] || continue
+            echo "削除: $f"
+            gh release delete-asset episodes "$f" --yes || true
+          done < output/pruned.txt
+
+      - name: RSS を公開
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/
+          git diff --staged --quiet && echo "更新なし" && exit 0
+          git commit -m "エピソードを追加 ($(date -u +%Y-%m-%d))"
+          # 実行中に利用者がブラウザで設定を編集していると push が弾かれるため、
+          # 相手の変更を取り込んでから送る
+          git pull --rebase origin "$GITHUB_REF_NAME" || true
+          git push
+
+      - name: 台本をログとして保存
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: episode-text
+          path: |
+            output/episodes/
+            logs/
+          retention-days: 30
