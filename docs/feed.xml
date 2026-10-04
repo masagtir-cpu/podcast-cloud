@@ -13,6 +13,15 @@
     <itunes:explicit>false</itunes:explicit>
     <atom:link href="https://masagtir-cpu.github.io/podcast-cloud/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>テックウィークリー 2026年10月04日</title>
+      <description>1. AIの進化がもたらす「究極のリスク」への警告と人類の未来を巡る議論 / 2. 実世界で稼働する「フィジカルAI」——川崎重工が自律型ヒト型ロボット開発へ / 3. macOSにおけるAI機能の管理とリスク対策——パーソナル端末での実務的課題</description>
+      <pubDate>Sun, 04 Oct 2026 06:00:00 +0900</pubDate>
+      <guid isPermaLink="false">2026-10-04-tech-weekly</guid>
+      <enclosure url="https://github.com/masagtir-cpu/podcast-cloud/releases/download/episodes/2026-10-04_tech-weekly.mp3" length="7615629" type="audio/mpeg"/>
+      <itunes:duration>00:10:35</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
       <title>テックウィークリー 2026年09月29日</title>
       <description>[注目トピック1] AIの「安全性」を巡る緊張感：OpenAIの新モデル公開見送りとAnthropicが警告する法的リスク / [注目トピック2] インフラ投資とリターンのバランス：巨額のデータセンター需要と、高まる市場の懸念 / [注目トピック3] アルゴリズムが変える価格のあり方：ダイナミックプライシングの一般化と「公正さ」の境界線</description>
       <pubDate>Tue, 29 Sep 2026 06:00:00 +0900</pubDate>
