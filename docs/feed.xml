@@ -13,6 +13,15 @@
     <itunes:explicit>false</itunes:explicit>
     <atom:link href="https://masagtir-cpu.github.io/podcast-cloud/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>テックウィークリー 2026年10月18日</title>
+      <description>AI検索普及で「ゼロクリック率」が68%へ上昇——Web集客と情報提供の構造変化 / 導入社数10倍の「AI面接」——「察して」が通用しないコミュニケーションへのシフト / 【続報】巨額AIインフラ投資の軌道修正——英国データセンター計画からのマイクロソフト撤退</description>
+      <pubDate>Sun, 18 Oct 2026 06:00:00 +0900</pubDate>
+      <guid isPermaLink="false">2026-10-18-tech-weekly</guid>
+      <enclosure url="https://github.com/masagtir-cpu/podcast-cloud/releases/download/episodes/2026-10-18_tech-weekly.mp3" length="7849485" type="audio/mpeg"/>
+      <itunes:duration>00:10:54</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
       <title>テックウィークリー 2026年10月12日</title>
       <description>注目トピック1：AIを活用した不正アクセスの急増と「隅っこの脆弱性」の脅威 / 注目トピック2：Webプライバシーと認証の最前線――フィンガープリンティングの台頭とパスキーを巡る議論 / 注目トピック3：生成AIの安全性評価システムの開発と、実世界で顕在化する誤動作リスク</description>
       <pubDate>Mon, 12 Oct 2026 06:00:00 +0900</pubDate>
