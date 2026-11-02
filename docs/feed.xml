@@ -13,6 +13,15 @@
     <itunes:explicit>false</itunes:explicit>
     <atom:link href="https://masagtir-cpu.github.io/podcast-cloud/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>テックウィークリー 2026年11月02日</title>
+      <description>1. AI導入の「収益化」と「ROI創出」をめぐる現実と企業の組織変革 / 2. 産業現場・専門業務への「AIエージェント」本格適用の広がり / 3. 生成AI時代の「コンテンツの真贋」とプロフェッショナルのキャリア危機</description>
+      <pubDate>Mon, 02 Nov 2026 06:00:00 +0900</pubDate>
+      <guid isPermaLink="false">2026-11-02-tech-weekly</guid>
+      <enclosure url="https://github.com/masagtir-cpu/podcast-cloud/releases/download/episodes/2026-11-02_tech-weekly.mp3" length="8909324" type="audio/mpeg"/>
+      <itunes:duration>00:12:22</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
       <title>テックウィークリー 2026年10月25日</title>
       <description>ガートナーが「2027年に向けた戦略的テクノロジートレンド10選」を発表——生体コンピューティングなど未来技術が浮上 / Anthropicによる「AI虐待」対策とセキュリティの警鐘——対話マナーから自己複製リスクまで / 医療・ライフサイエンスにおけるテクノロジーの躍進——mRNAがんワクチンの成果とAI活用の最新教訓</description>
       <pubDate>Sun, 25 Oct 2026 06:00:00 +0900</pubDate>
