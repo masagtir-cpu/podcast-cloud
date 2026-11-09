@@ -13,6 +13,15 @@
     <itunes:explicit>false</itunes:explicit>
     <atom:link href="https://masagtir-cpu.github.io/podcast-cloud/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>テックウィークリー 2026年11月09日</title>
+      <description>人間の100倍速で押し寄せる「AI駆動攻撃」――セキュリティの自動化と局所化が急務に / 米欧中および日本で進むAI運用統制とルールづくり / AI市場に訪れた評価の調整期――調達額の下振れとAI株下落が示唆するもの</description>
+      <pubDate>Mon, 09 Nov 2026 06:00:00 +0900</pubDate>
+      <guid isPermaLink="false">2026-11-09-tech-weekly</guid>
+      <enclosure url="https://github.com/masagtir-cpu/podcast-cloud/releases/download/episodes/2026-11-09_tech-weekly.mp3" length="9001484" type="audio/mpeg"/>
+      <itunes:duration>00:12:30</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
       <title>テックウィークリー 2026年11月02日</title>
       <description>1. AI導入の「収益化」と「ROI創出」をめぐる現実と企業の組織変革 / 2. 産業現場・専門業務への「AIエージェント」本格適用の広がり / 3. 生成AI時代の「コンテンツの真贋」とプロフェッショナルのキャリア危機</description>
       <pubDate>Mon, 02 Nov 2026 06:00:00 +0900</pubDate>
