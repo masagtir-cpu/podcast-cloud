@@ -13,6 +13,15 @@
     <itunes:explicit>false</itunes:explicit>
     <atom:link href="https://masagtir-cpu.github.io/podcast-cloud/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>テックウィークリー 2026年11月16日</title>
+      <description>1. 韓国の入試で警戒高まる「AIメガネ」―物理AIデバイスが突きつける試験・運用の新たな課題 / 2. AI事業者への「2.5％賦課金」提案―豪科学アカデミーが模索するAIエコシステムの費用負担 / 3. アドビが「MCP」対応を推進―単体での生成から「ワークフロー連携」へ進化するAI</description>
+      <pubDate>Mon, 16 Nov 2026 06:00:00 +0900</pubDate>
+      <guid isPermaLink="false">2026-11-16-tech-weekly</guid>
+      <enclosure url="https://github.com/masagtir-cpu/podcast-cloud/releases/download/episodes/2026-11-16_tech-weekly.mp3" length="5722604" type="audio/mpeg"/>
+      <itunes:duration>00:07:57</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
       <title>テックウィークリー 2026年11月09日</title>
       <description>人間の100倍速で押し寄せる「AI駆動攻撃」――セキュリティの自動化と局所化が急務に / 米欧中および日本で進むAI運用統制とルールづくり / AI市場に訪れた評価の調整期――調達額の下振れとAI株下落が示唆するもの</description>
       <pubDate>Mon, 09 Nov 2026 06:00:00 +0900</pubDate>
