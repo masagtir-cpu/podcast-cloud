@@ -13,6 +13,15 @@
     <itunes:explicit>false</itunes:explicit>
     <atom:link href="https://masagtir-cpu.github.io/podcast-cloud/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>テックウィークリー 2026年11月23日</title>
+      <description>OpenAI主任科学者が「AI開発の上限設定」を提案―指標はパープレキシティ / 巨大化するAIインフラ戦力―オラクルの資金確保とSpaceXの自家発電型インフラ / 【続報】韓国の入試AI不正問題が拡大―教育相の辞任と厳格な検査実施へ発展</description>
+      <pubDate>Mon, 23 Nov 2026 06:00:00 +0900</pubDate>
+      <guid isPermaLink="false">2026-11-23-tech-weekly</guid>
+      <enclosure url="https://github.com/masagtir-cpu/podcast-cloud/releases/download/episodes/2026-11-23_tech-weekly.mp3" length="5886764" type="audio/mpeg"/>
+      <itunes:duration>00:08:10</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
       <title>テックウィークリー 2026年11月16日</title>
       <description>1. 韓国の入試で警戒高まる「AIメガネ」―物理AIデバイスが突きつける試験・運用の新たな課題 / 2. AI事業者への「2.5％賦課金」提案―豪科学アカデミーが模索するAIエコシステムの費用負担 / 3. アドビが「MCP」対応を推進―単体での生成から「ワークフロー連携」へ進化するAI</description>
       <pubDate>Mon, 16 Nov 2026 06:00:00 +0900</pubDate>
